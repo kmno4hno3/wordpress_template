@@ -120,3 +120,88 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/*確認用に一時記述----------*/
+.contents, #sidebar {height: 800px; }
+ 
+header{background-color: #888;}
+ 
+.header-inner{ background-color: #ccc; height: 200px;}
+ 
+.container {background-color: #9db2ea;}
+ 
+.contents {background-color: #a5e2ff; }
+ 
+#sidebar{background-color: #aefffc; }
+ 
+footer{background-color: #777; }
+ 
+.footer-inner{background-color: #ddd; height: 250px; }
+/*------------------------*/
+
+.header,
+.container,
+.footer-inner {
+  /* パディングとボーダーを幅と高さに含める */
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  /* rem:html要素(16px)のpxに依存したpx　↓16px × 1.26 = 20px */
+  padding: 1.25 rem;
+}
+
+/* PC用のレアアウト */
+.container {
+  padding: 2rem 1.25rem;
+}
+ 
+.container:after {
+  display: block;
+  /* floatで子要素の回り込みを解除(認識して高さを調整する) */
+  clear: both;
+  content: '';
+}
+ 
+.contents {
+  float: left;
+  width: 70%;
+  margin-right: 3%;
+}
+ 
+.sidebar {
+  float: left;
+  width: 27%;
+}
+
+/* タブレット用のレイアウト */
+@media(max-width: 800px) {
+  .contents,
+  .sidebar {
+    float:none;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .contents {
+    margin-bottom: 1.5 rem;
+  }
+}
+
+/* スマートフォン用のレイアウト */
+@media(max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+
+  .header-inner,
+  .container,
+  .footer-inner {
+    padding: .8rem;
+  }
+
+  .contents {
+    margin-bottom: 1rem;
+  }
+}
