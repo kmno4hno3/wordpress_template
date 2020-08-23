@@ -123,18 +123,9 @@ img {
 
 
 /*確認用に一時記述----------*/
-.contents, #sidebar {height: 800px; }
- 
- 
-.container {background-color: #9db2ea;}
+.contents {height: 800px; }
  
 .contents {background-color: #a5e2ff; }
- 
-#sidebar{background-color: #aefffc; }
- 
-footer{background-color: #777; }
- 
-.footer-inner{background-color: #ddd; height: 250px; }
 /*------------------------*/
 
 .header,
@@ -345,6 +336,307 @@ footer{background-color: #777; }
   .header-nav li a:after {
     right: .8rem;
   }
-  
+}
 
+/* PC用フッターデザイン */
+.footer {
+  background-color: #23282d;
+}
+
+.footer-nav,
+.copyright {
+  text-align: center;
+}
+
+.footer-nav {
+  font-size: 0;
+  margin-bottom: 3rem;
+}
+
+.footer-nav li {
+  font-size: 1rem;
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-nav li a:hover {
+  opacity: .6;
+}
+
+.copyright p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+/* タブレット・スマホ用フッターデザイン */
+@media(max-width: 800px) {
+  .footer-nav {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-nav ul {
+    text-align: left;
+  }
+
+  .footer-nav li {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+
+/* サイドバーウィジェットのデザイン */
+.sidebar-wrapper {
+  margin-bottom: 2rem;
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  margin: 0 0 1.2rem;
+  padding: .5rem;
+  color: #000;
+  border-bottom: 4px solid #03162f;
+}
+
+/*デフォルトウィジェット*/
+.widget_recent_entries ul,
+.widget_meta ul,
+.widget_recent_comments ul,
+.widget_pages ul,
+.widget_meta ul,
+.widget_categories ul,
+.widget_archive ul,
+.widget_nav_menu ul,
+.calendar_wrap,
+.tagcloud {
+  list-style: none;
+}
+ 
+.widget_recent_entries li,
+.widget_meta li,
+.widget_recent_comments li,
+.widget_pages li,
+.widget_meta li,
+.widget_archive li,
+.widget_nav_menu li {
+  position: relative;
+  margin-bottom: .5rem;
+}
+ 
+.widget_recent_entries a,
+.widget_meta a,
+.widget_recent_comments a,
+.widget_pages a,
+.widget_meta a,
+.widget_categories a,
+.widget_archive a,
+.widget_nav_menu a {
+  text-decoration: none;
+  color: #333;
+}
+ 
+.sidebar-wrapper a:hover {
+  opacity: .6;
+}
+ 
+/*カテゴリウィジェット*/
+.widget_categories li {
+  display: block;
+  margin-bottom: .5rem;
+}
+ 
+.widget_categories li a {
+  font-size: .95rem;
+  position: relative;
+  display: block;
+  padding: .9rem .6rem .9rem 2rem;
+  color: #fff;
+  background-color: #03162f;
+}
+ 
+.widget_categories li a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: .6rem;
+  content: '\f02b';
+  transform: translateY(-50%);
+  color: #fff;
+}
+ 
+.widget_categories .children {
+  margin-bottom: .5rem;
+  padding: 0;
+  padding-left: 1rem;
+  background-color: #415671;
+}
+ 
+.widget_categories .children li {
+  margin-bottom: 0;
+}
+ 
+.widget_categories .children li a {
+  font-size: .9rem;
+  background-color: transparent;
+}
+ 
+.widget_categories .children li a::before {
+  position: absolute;
+  top: 50%;
+  left: .6rem;
+  content: '∟';
+  transform: translateY(-50%);
+  color: #fff;
+}
+ 
+/*カテゴリウィジェットとアーカイブウィジェットのドロップダウン表示*/
+.widget_categories .screen-reader-text {
+  display: none;
+}
+ 
+.widget_archive .screen-reader-text {
+  position: relative;
+  display: block;
+  height: 0;
+  text-indent: -9999999px;
+}
+ 
+.widget_categories form {
+  position: relative;
+}
+ 
+.widget_categories form::after {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  content: '▼';
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+ 
+.widget_categories .postform,
+.widget_archive select {
+  font-size: .95rem;
+  width: 100%;
+  padding: 4px 10px;
+  cursor: pointer;
+  border: 1px solid #e0e3ef;
+  border-radius: 0;
+  background-color: #f4f5f9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+ 
+.widget_archive label::after {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  content: '▼';
+  text-indent: 0;
+  pointer-events: none;
+}
+ 
+/*タグウィジェット*/
+.tagcloud a {
+  font-size: .9rem !important;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  margin-bottom: .5rem;
+  padding: .2rem .5rem;
+  text-decoration: none;
+  color: #03162f;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+ 
+/*メニューウィジェット*/
+.widget_nav_menu li a {
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  padding-left: 1.3rem;
+  color: #333;
+}
+ 
+.widget_nav_menu li a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '\f105';
+  transform: translateY(-50%);
+  color: #03162f;
+}
+ 
+/*最近の投稿*/
+.widget_recent_entries li {
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #ddd;
+}
+ 
+.widget_recent_entries li a:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  font-weight: 900;
+  position: absolute;
+  left: 5px;
+  content: '\f303';
+  color: #000;
+}
+ 
+.widget_recent_entries li a {
+  display: block;
+  margin-bottom: .3rem;
+  padding-left: 1.6rem;
+}
+ 
+.widget_recent_entries .post-date {
+  font-size: .8rem;
+  display: block;
+}
+ 
+/*カレンダーウィジェット*/
+.calendar_wrap {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+ 
+.calendar_wrap table {
+  width: 100%;
+}
+ 
+.calendar_wrap tbody {
+  text-align: center;
+}
+ 
+.calendar_wrap caption {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+ 
+.calendar_wrap td {
+  padding: .3rem 0;
+}
+ 
+.calendar_wrap tfoot td {
+  padding-top: .7rem;
+}
+ 
+.calendar_wrap tfoot td:last-child {
+  text-align: right;
 }
